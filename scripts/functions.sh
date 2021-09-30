@@ -35,6 +35,8 @@ function filterExcludedAndGeneratedFiles {
         '(^|/)Pipfile$'
         '(^|/)Pipfile\.lock$'
         '(^|/)tox\.ini$'
+        '\.gitignore$'
+        '\Makefile$'
     )
 
     local filter

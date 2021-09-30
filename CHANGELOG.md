@@ -1990,7 +1990,7 @@ Tue Apr  9 11:25:34 EDT 2019
 * [2ed60bb](https://github.com/hyperledger/fabric/commit/2ed60bb) [FAB-12709](https://jira.hyperledger.org/browse/FAB-12709) Add integration test for CheckQuorum
 * [ba2bd90](https://github.com/hyperledger/fabric/commit/ba2bd90) [FAB-12709](https://jira.hyperledger.org/browse/FAB-12709) Enable CheckQuorum
 * [87397a1](https://github.com/hyperledger/fabric/commit/87397a1) [FAB-12709](https://jira.hyperledger.org/browse/FAB-12709) Use another way to elect leader in UT
-* [9d2efcd](https://github.com/hyperledger/fabric/commit/9d2efcd) [FAB-13932](https://jira.hyperledger.org/browse/FAB-13932) Fix misspelling of "commerical"
+* [9d2efcd](https://github.com/hyperledger/fabric/commit/9d2efcd) [FAB-13932](https://jira.hyperledger.org/browse/FAB-13932) Fix misspelling of "commercial"
 * [82bad5f](https://github.com/hyperledger/fabric/commit/82bad5f) [FAB-13929](https://jira.hyperledger.org/browse/FAB-13929) disable flaky TestEndedGoroutines test
 * [3d8cf1e](https://github.com/hyperledger/fabric/commit/3d8cf1e) [FAB-13870](https://jira.hyperledger.org/browse/FAB-13870) take care of TestParallelSend flakes
 * [7c886fb](https://github.com/hyperledger/fabric/commit/7c886fb) [FAB-13924](https://jira.hyperledger.org/browse/FAB-13924) Create new policy protobuf

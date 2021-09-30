@@ -330,7 +330,7 @@ graph store, or a temporal database.  This provides great flexibility in the
 types of ledger states that can be efficiently accessed, allowing Hyperledger
 Fabric to address many different types of problems.
 
-## Example Ledger: Basic Asset Transfer 
+## Example Ledger: Basic Asset Transfer
 
 As we end this topic on the ledger, let's have a look at a sample ledger. If
 you've run the [basic asset transfer sample application](../write_first_app.html), then you've

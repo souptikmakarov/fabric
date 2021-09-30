@@ -188,7 +188,7 @@ We can now see that the asset is for sale:
 {"object_type":"asset","asset_id":"asset1","owner_org":"Org1MSP","public_description":"This asset is for sale"}
 ```
 
-  ![Org1 creates a asset](./transfer_assets_1.png)  
+  ![Org1 creates a asset](./transfer_assets_1.png)
 *Figure 1: When Org1 creates an asset that they own, the asset details are stored in the Org1 implicit data collection on the Org1 peer. The public ownership record is stored in the channel world state, and is stored on both the Org1 and Org2 peers. A hash of the asset key and a hash the asset details are also visible in the channel world state and are stored on the peers of both organizations.*
 
 ### Operate from the Org2 terminal
@@ -259,8 +259,8 @@ You can read the agreed purchase price from the Org2 implicit data collection:
 peer chaincode query -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile "${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem" -C mychannel -n secured -c '{"function":"GetAssetBidPrice","Args":["asset1"]}'
 ```
 
-  ![Org1 and Org2 agree on transfer](./transfer_assets_2.png)  
-*Figure 2: After Org1 and Org2 agree to transfer the asset, the price agreed to by each organization is stored in their private data collections. A composite key for the seller and the buyer is used to prevent a collision with the asset details and asset ownership record. The price that is agreed to is only stored on the peers of each organization. However, the hash of both agreements is stored in the channel world state on every peer joined to the channel.*  
+  ![Org1 and Org2 agree on transfer](./transfer_assets_2.png)
+*Figure 2: After Org1 and Org2 agree to transfer the asset, the price agreed to by each organization is stored in their private data collections. A composite key for the seller and the buyer is used to prevent a collision with the asset details and asset ownership record. The price that is agreed to is only stored on the peers of each organization. However, the hash of both agreements is stored in the channel world state on every peer joined to the channel.*
 
 ## Transfer the asset from Org1 to Org2
 
@@ -305,7 +305,7 @@ The record now lists Org2 as the asset owner:
 {"object_type":"asset","asset_id":"asset1","owner_org":"Org2MSP","public_description":"This asset is for sale"}
 ```
 
-  ![Org1 transfers the asset to Org2](./transfer_assets_3.png)  
+  ![Org1 transfers the asset to Org2](./transfer_assets_3.png)
 *Figure 3: After the asset is transferred, the asset details are placed in the Org2 implicit data collection and deleted from the Org1 implicit data collection. As a result, the asset details are now only stored on the Org2 peer. The asset ownership record on the ledger is updated to reflect that the asset is owned by Org1.*
 
 ### Update the asset description as Org2

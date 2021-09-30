@@ -57,7 +57,7 @@ Policies:
 
 The ImplicitMeta policies in the **Application** section govern how peer organizations interact with the channel. Each policy references the signature policies associated with each channel member. You see the relationship between the policies in the **Application** section and the policies in the **Organization** section below:
 
-  ![Application policies](application-policies.png)  
+  ![Application policies](application-policies.png)
 
 *Figure 1: The Admins ImplicitMeta policy can be satisfied by a majority of the Admins signature policies that are defined by each organization.*
 
@@ -65,13 +65,13 @@ Each policy is referred to its path in the channel configuration. Because the po
 
 The `Rule` in each ImplicitMeta references the name of the signature policies that can satisfy the policy. For example, the `Channel/Application/Admins` ImplicitMeta policy references the `Admins` signature policies for each organization. Each `Rule` also contains the number of signature policies that are required to satisfy the ImplicitMeta policy. For example, the `Channel/Application/Admins` policy requires that a majority of the `Admins` signature policies be satisfied.
 
-  ![Application admins](application-admins.png)  
+  ![Application admins](application-admins.png)
 
 *Figure 2: A channel update request submitted to the channel contains signatures from Org1, Org2, and Org3, satisfying the signature policies for each organization. As a result, the request satisfies the Channel/Application/Admins policy. The Org3 check is in light green because the signature was not required to reach to a majority.*
 
 To provide another example, the `Channel/Application/Endorsement` policy can be satisfied by a majority of organization `Endorsement` policies, which require signatures from the peers of each organization. This policy is used by the Fabric chaincode lifecycle as the default chaincode endorsement policy. Unless you commit a chaincode definition with a different endorsement policy, transactions that invoke a chaincode need to be endorsed by a majority of channel members.
 
-  ![channel endorsement policies](application-endorsement.png)  
+  ![channel endorsement policies](application-endorsement.png)
 
 *Figure 3: A transaction from a client application invoked a chaincode on the peers of Org1 and Org2. The chaincode invoke was successful, and the application received an endorsement from the peers of both organizations. Because this transaction satisfies the Channel/Application/Endorsement policy, the transaction meets the default endorsement policy and can be added to the channel ledger.*
 
@@ -97,7 +97,7 @@ peer/Propose: /Channel/Application/Writers
 
 Most of the default ACLs point to the ImplicitMeta policies in the application section of the channel configuration. To extend the example above, an organization can invoke a chaincode if they can satisfy the `/Channel/Application/Writers` policy.
 
-  ![channel writer policies](application-writers.png)  
+  ![channel writer policies](application-writers.png)
 
 *Figure 4: The peer/Propose ACL is satisfied by the /Channel/Application/Writers policy. This policy can be satisfied by a transaction submitted by a client application from any organization with the writers signature policy.*
 
@@ -105,13 +105,13 @@ Most of the default ACLs point to the ImplicitMeta policies in the application s
 
 The ImplicitMeta policies in the **Orderer** section of `configtx.yaml` govern the ordering nodes of a channel in a similar way as the **Application** section governs the peer organizations. The ImplicitMeta policies point to the signature policies associated with the organizations that are ordering service administrators.
 
-  ![Orderer policies](orderer-policies.png)  
+  ![Orderer policies](orderer-policies.png)
 
 *Figure 5: The Channel/Orderer/Admins policy points to the Admins signature policies associated with the administrators of the ordering service.*
 
 If you use the default policies, a majority of orderer organizations are required to approve the addition or removal of an ordering node.
 
-  ![Orderer policies](orderer-admins.png)  
+  ![Orderer policies](orderer-admins.png)
 
 *Figure 6: A request submitted to remove an ordering node from the channel contains signatures from the three ordering organizations in the network, satisfying the Channel/Orderer/Admins policy. The Org3 check is in light green because the signature was not required to reach to a majority.*
 

@@ -2,12 +2,12 @@
 
 -	**Hyperledger Fabric project page**: https://www.hyperledger.org/projects/fabric
 
--	**Where to get Docker help**:  
+-	**Where to get Docker help**:
 	[the Docker Community Forums](https://forums.docker.com/),
 	[the Docker Community Slack](http://dockr.ly/slack),
 	or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
 
--	**Where to get Hyperledger Fabric help**:  
+-	**Where to get Hyperledger Fabric help**:
 	[Fabric documentation](https://hyperledger-fabric.readthedocs.io/en/latest/),
 	[Stackoverflow](https://stackoverflow.com/questions/tagged/hyperledger-fabric),
 	or [Chat](https://chat.hyperledger.org/channel/fabric) ([Chat login help](https://wiki.hyperledger.org/display/CA/Logging+in+to+chat))
@@ -22,10 +22,10 @@
 -	**Tags available**:
 	Architecture specific (e.g. `amd64-2.0.0`), release specific (e.g. `2.0.0`), and latest patch of minor release (e.g. `2.0`).
 
--	**Image Dockerfile**:  
+-	**Image Dockerfile**:
 	[Dockerfile location](https://github.com/hyperledger/fabric/blob/main/images/peer/Dockerfile)
 
--	**Source of this description**:  
+-	**Source of this description**:
 	[Fabric github repository](https://github.com/hyperledger/fabric/blob/main/images/peer/README.md)
 
 # What is a Hyperledger Fabric peer?

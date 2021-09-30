@@ -18,7 +18,7 @@ To create a channel using the test network, this tutorial takes you through the 
 
 To run the test network, you need to clone the `fabric-samples`
 repository and download the latest production Fabric images. Make sure that you have installed
-the [Prerequisites](../prereqs.html) and [Installed the Samples, Binaries, and Docker Images](../install.html).  
+the [Prerequisites](../prereqs.html) and [Installed the Samples, Binaries, and Docker Images](../install.html).
 
 **Note:** After you create a channel and join peers to it, you will need to you add anchor peers to the channel, in order for service discovery and private data to work. Instructions on how to set an anchor peer on your channel are included in this tutorial, but require that the [jq tool](https://stedolan.github.io/jq/) is installed on your local machine.
 
@@ -55,7 +55,7 @@ b6b117c81c7f   hyperledger/fabric-peer:latest      "peer node start"   2 seconds
 718d43f5f312   hyperledger/fabric-peer:latest      "peer node start"   2 seconds ago   Up 1 second             7051/tcp, 0.0.0.0:9051->9051/tcp                 peer0.org2.example.com
 ```
 
-Notice that the peers are running on ports `7051` and `9051`, while the orderer is running on port `7050`. We will use these ports in subsequent commands.  
+Notice that the peers are running on ports `7051` and `9051`, while the orderer is running on port `7050`. We will use these ports in subsequent commands.
 
 By default, when you start the test network, it does not contain any channels. The following instructions demonstrate how to add a channel that is named `channel1` to this network.
 
@@ -119,7 +119,7 @@ Want to learn more about this file and how to build your own channel application
 
 ## Step one: Generate the genesis block of the channel
 
-Because we have started the Fabric test network, we are ready to create a new channel. We have already set the environment variables that are required to use the `configtxgen` tool.   
+Because we have started the Fabric test network, we are ready to create a new channel. We have already set the environment variables that are required to use the `configtxgen` tool.
 
 Run the following command to create the channel genesis block for `channel1`:
 ```
@@ -261,7 +261,7 @@ Finally, after an organization has joined their peers to the channel, they shoul
 
 The endpoint information of the anchor peers of each organization is included in the channel configuration. Each channel member can specify their anchor peers by updating the channel. We will use the [configtxlator](../commands/configtxlator.html) tool to update the channel configuration and select an anchor peer for `Org1` and `Org2`.
 
-**Note:** If [jq](https://stedolan.github.io/jq/) is not already installed on your local machine, you need to install it now to complete these steps.  
+**Note:** If [jq](https://stedolan.github.io/jq/) is not already installed on your local machine, you need to install it now to complete these steps.
 
 We will start by selecting the peer from `Org1` to be an anchor peer. The first step is to pull the most recent channel configuration block using the `peer channel fetch` command. Set the following environment variables to operate the `peer` CLI as the `Org1` admin:
 ```

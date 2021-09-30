@@ -12,7 +12,7 @@ component with a flexible and controlled workload. These benchmarks short-circui
 chaincode and go directly to the transaction simulator. Also, for block creation,
 these benchmarks use a simple in-memory block-cutter.
 
-These benchmarks first run insert transactions to populate the data and then run the 
+These benchmarks first run insert transactions to populate the data and then run the
 read-write transactions on the populated data. The primary purpose of these benchmarks is
 to measure the throughput capacity of the ledger component and how it changes for a given
 workload.

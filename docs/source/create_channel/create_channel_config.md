@@ -63,7 +63,7 @@ You can see the part of `configtx.yaml` that defines Org1 of the test network be
       # and peers may to connect to to push transactions and receive blocks respectively.
       OrdererEndpoints:
           - "orderer.example.com:7050"
-  ```  
+  ```
 
   - The `Name` field is an informal name used to identify the organization.
 
@@ -93,7 +93,7 @@ If you examine the `configtx.yaml` file, you will see three capability groups:
 
 - **Channel** capabilities set the minimum version of the Fabric that can be run by peer and ordering nodes.
 
-Because both of the peers and the ordering node of the Fabric test network run version v2.x, every capability group is set to `V2_0`. As a result, the test network cannot be joined by nodes that run a lower version of Fabric than v2.0. For more information, see the [capabilities](../capabilities_concept.html) concept topic.  
+Because both of the peers and the ordering node of the Fabric test network run version v2.x, every capability group is set to `V2_0`. As a result, the test network cannot be joined by nodes that run a lower version of Fabric than v2.0. For more information, see the [capabilities](../capabilities_concept.html) concept topic.
 
 ## Application
 
@@ -128,7 +128,7 @@ Each channel configuration includes the orderer nodes in the channel [consenter 
 
 - The `Policies` section creates the policies that govern the channel consenter set. The test network uses the default policies provided by Fabric, which require that a majority of orderer administrators approve the addition or removal of ordering nodes, organizations, or an update to the block cutting parameters.
 
-Because the test network is used for development and testing, it uses an ordering service that consists of a single ordering node. Networks that are deployed in production should use a multi-node ordering service for security and availability. To learn more, see [Configuring and operating a Raft ordering service](../raft_configuration.html).  
+Because the test network is used for development and testing, it uses an ordering service that consists of a single ordering node. Networks that are deployed in production should use a multi-node ordering service for security and availability. To learn more, see [Configuring and operating a Raft ordering service](../raft_configuration.html).
 
 ## Channel
 
